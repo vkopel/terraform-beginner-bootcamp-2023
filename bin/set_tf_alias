@@ -10,7 +10,7 @@ if [$? -ne 0]; then
   echo "Alias added successfully"
 else
   # If the alias already exists, notify the user
-  echo "Alias 'tf' already exists in .bash_profile."
+  echo "Alias already exists in .bash_profile."
 fi
 
 # Optional: Source the .bash_profile to make the alias available immediately
