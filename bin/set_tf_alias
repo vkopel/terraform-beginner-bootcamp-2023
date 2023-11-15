@@ -4,7 +4,7 @@
 grep -q 'alias tf="terraform"' ~/.bash_profile
 
 # $? is a special variable in bash that holds the exist status of the last command executed 
-if [$? -ne 0]; then
+if [ $? -ne 0 ]; then
   # If the alias does not exist, append it
   echo 'alias tf="terraform"' >> ~/.bash_profile
   echo "Alias added successfully"
