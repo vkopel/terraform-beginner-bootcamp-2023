@@ -1,6 +1,6 @@
 # Terraform Beginner Bootcamp 2023 - Week 0
 
-- [Semantic Versioning :mage:](#semantic-versioning--mage-)
+- [Semantic Versioning](#semantic-versioning)
 - [Install the Terraform CLI](#install-the-terraform-cli)
   * [Considerations with the Terraform CLI changes](#considerations-with-the-terraform-cli-changes)
   * [Consideration for Linux Distribution](#consideration-for-linux-distribution)
@@ -8,14 +8,14 @@
     + [Shebang Considerations](#shebang-considerations)
     + [Execution Considerations](#execution-considerations)
     + [Linux Permissions Considerations](#linux-permissions-considerations)
-  * [Gitpod Lifecycle (Before, Init, Command)](#gitpod-lifecycle--before--init--command-)
-  * [Working Env Vars](#working-env-vars)
-    + [env command](#env-command)
-    + [Setting and Unsetting Env Vars](#setting-and-unsetting-env-vars)
-    + [Printing Env Vars](#printing-env-vars)
-    + [Scoping of Env Vars](#scoping-of-env-vars)
-    + [Persisting Env Vars in Gitpod](#persisting-env-vars-in-gitpod)
-  * [AWS CLI Installation](#aws-cli-installation)
+- [Gitpod Lifecycle](#gitpod-lifecycle)
+- [Working Env Vars](#working-env-vars)
+  * [env command](#env-command)
+  * [Setting and Unsetting Env Vars](#setting-and-unsetting-env-vars)
+  * [Printing Env Vars](#printing-env-vars)
+  * [Scoping of Env Vars](#scoping-of-env-vars)
+  * [Persisting Env Vars in Gitpod](#persisting-env-vars-in-gitpod)
+- [AWS CLI Installation](#aws-cli-installation)
 - [Terraform Basics](#terraform-basics)
   * [Terraform Registry](#terraform-registry)
 - [Terraform Console](#terraform-console)
@@ -28,7 +28,7 @@
   * [Terraform Directory](#terraform-directory)
 - [Issues with Terraform Cloud Login and Gitpod Workspace](#issues-with-terraform-cloud-login-and-gitpod-workspace)
 
-## Semantic Versioning :mage:
+## Semantic Versioning
 
 This project is going to utilize semantic versioning for its tagging.
 [semver.org](https://semver.org/)
@@ -120,20 +120,20 @@ chmod 744 ./bin/install_terraform_cli
 
 https://en.wikipedia.org/wiki/Chmod
 
-### Gitpod Lifecycle (Before, Init, Command)
+## Gitpod Lifecycle
 
 We need to be careful when using the Init because it will not rerun if we restart and existing workspace.
 
 https://www.gitpod.io/docs/configure/workspaces/tasks
 
-### Working Env Vars
+## Working Env Vars
 
-#### env command
+### env command
 We can list out all Environmental Variables (Env Vars) using the `env` command
 
 We can filter specific env vars using grep e.g. `env | grep AWS_`
 
-#### Setting and Unsetting Env Vars
+### Setting and Unsetting Env Vars
 
 In the terminal we can set using `export HELLO='world`
 
@@ -153,17 +153,17 @@ HELLO='world'
 
 echo $HELLO
 ```
-#### Printing Env Vars
+### Printing Env Vars
 
 We can print an env var using echo e.g. `echo $HELLO`
 
-#### Scoping of Env Vars
+### Scoping of Env Vars
 
 When you open a new bash terminals in VSCode, it will not be aware of env vars that you have set in another window.
 
 If you want Env Vars to persist across all future bash terminals that are open, you need to set env vars in your bash profile. e.g. `bash_profile`
 
-#### Persisting Env Vars in Gitpod
+### Persisting Env Vars in Gitpod
 
 We can persist env vars in gitpod by storing them in Gitpod Secrets Storage
 
@@ -175,7 +175,7 @@ All future workspaces launched will set the env vars for all bash terminals open
 
 You can also set env vars in the `.gitpod.yml` but this can only contain non-sensitive env vars.
 
-### AWS CLI Installation
+## AWS CLI Installation
 
 AWS CLI is install for this project via the bash script [`./bin/install_aws_cli`](./bin/install_aws_cli)
 [AWS CLI Env Vars](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html)
