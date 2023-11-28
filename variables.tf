@@ -6,3 +6,16 @@ validation {
   error_message = "The user_uuid"
   }
 }
+
+variable "bucket_name" {
+  description = "The name of the S3 bucket"
+  type = string
+
+  validation {
+    condition = (
+      length(var.bucket_name) >= 3 && length(var.bucket_name) <= 63 &&
+      can(regex("^[a-z0-9][a-z0-9-.]*[a-z0-9]$", var.bucket_name))
+    )
+    error_message = "The bucket name must be 3 and 63 characters, Please provide a valid name adhering to AWS S3 naming rules."
+  }
+}
