@@ -109,3 +109,19 @@ module "terrahouse_aws" {
 ```
 
 [Modules Sources](https://developer.hashicorp.com/terraform/language/modules/sources)
+
+## Considerations when using chatGPT to write Terraform
+
+LLMs such as ChatGPT may not be trained on the latest documentation or information about Terraform.
+
+It may likely produce older examples that could be deprecated. Often affecting providers. 
+
+## Working with Files in Terraform 
+
+### Path Variable
+
+In terraform, there is a special variable called `path` that allows us to reference local paths:
+- path.module = get the path for the current module.
+- path.root = get the path for the root module.
+
+[Special Path Variable](https://developer.hashicorp.com/terraform/language/expressions/references#filesystem-and-workspace-info)
