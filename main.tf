@@ -1,11 +1,11 @@
  terraform {
-  cloud {
-    organization = "vkopel"
+  #cloud {
+    #organization = "vkopel"
 
-    workspaces {
-      name = "terra-house-1"
-    }
-  }
+    #workspaces {
+      #name = "terra-house-1"
+    #}
+  #}
  }
 
 module "terrahouse_aws" {
