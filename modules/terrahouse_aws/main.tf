@@ -7,13 +7,13 @@ terraform {
   }
 }
 
-#resource "aws_s3_bucket" "website_bucket" {
+resource "aws_s3_bucket" "website_bucket" {
   bucket = var.bucket_name
 
   tags = {
     UserUuid = var.user_uuid
   }
-#}
+}
 
 # https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_website_configuration
 resource "aws_s3_bucket_website_configuration" "website_configuration" {
