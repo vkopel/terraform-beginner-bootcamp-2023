@@ -6,7 +6,7 @@ if [ "$#" -ne 1 ]; then
     exit 1
 fi
 
-user_uuid="4ad05ffc-cf7f-4381-b954-b9c3c6b9d6d1" 
+user_uuid="e328f4ab-b99f-421c-84c9-4ccea042c7d1" 
 token="9b49b3fb-b8e9-483c-b703-97ba88eef8e0"
 house_uuid="$1"
 
