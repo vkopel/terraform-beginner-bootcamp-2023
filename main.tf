@@ -47,13 +47,13 @@ module "home_exerciseday_hosting" {
 }
 
 resource "terratowns_home" "home_exerciseday" {
-  name = "Exercising at least trice a week"
+  name = "Exercising at least thrice a week"
   description = <<DESCRIPTION
-Exercising at least three times per week helps
-in boasting your immune system to always stay
-healthy
+Exercising at least three times per week 
+helps in boasting your immune 
+system in order to always stay healthy.
 DESCRIPTION
   domain_name = module.home_exerciseday_hosting.domain_name
-  town = "missingo"
+  town = "the-nomad-pad"
   content_version = var.exerciseday.content_version
 }

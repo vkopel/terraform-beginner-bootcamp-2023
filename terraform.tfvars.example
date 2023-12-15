@@ -1,9 +1,9 @@
 terratowns_endpoint="https://terratowns.cloud/api"
 cloudengineer = {
   public_path = "/workspace/terraform-beginner-bootcamp-2023/public/cloudengineer"
-  content_version = 2 
+  content_version = 4 
 }
 exerciseday = {
   public_path = "/workspace/terraform-beginner-bootcamp-2023/public/exerciseday"
-  content_version = 1 
+  content_version = 4 
 }
