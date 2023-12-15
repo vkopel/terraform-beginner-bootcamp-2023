@@ -3,10 +3,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cloud Computing</title>
+    <title>Stay Healthy - Exercise Day</title>
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+        html, body {
+          background: rgb(255,255,255);
+          height: 100%;
+          width: 100%;
+          padding: 0px;
+          margin: 0px;
+        }
+
+        h1,h2,h3,h4,h5,h6 {
+          margin: 0px;
+        }
+
+        h1 {
+          text-align: center;
+          margin-bottom: 24px;
+          font-size: 70px;
+          line-height: 1em;
+          font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+          color: rgb(189,65,27);
+          text-shadow: 1px 1px 0 #000,
+                      -1px 1px 0 #000,
+                      1px -1px 0 #000,
+                      -1px -1px 0 #000,
+                      0px 1px 0 #000,
+                      0px -1px 0 #000,
+                      -1px 0px 0 #000,
+                      1px 0px 0 #000,
+                      2px 2px 0 #000,
+                      -2px 2px 0 #000,
+                      2px -2px 0 #000,
+                      -2px -2px 0 #000,
+                      0px 2px 0 #000,
+                      0px -2px 0 #000,
+                      -2px 0px 0 #000,
+                      2px 0px 0 #000,
+                      1px 2px 0 #000,
+                      -1px 2px 0 #000,
+                      1px -2px 0 #000,
+                      -1px -2px 0 #000,
+                      2px 1px 0 #000,
+                      -2px 1px 0 #000,
+                      2px -1px 0 #000,
+                      -2px -1px 0 #000;
+        }
+
+        nav a {
+          font-size: 24px
+        }
+
+        main {
+          position: relative;
+          height: 100%;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+        }
+        .payday-runner {
+          background: url(./assets/exerciseday.jpeg);
+          background-repeat: repeat-y;
+          width: 112px;
+          height: 100%;
+          position: absolute;
+          z-index: 1;
+          top: 0px;
+          opacity: 0.3;
+        }
+        .payday-runner.left {
+          left: 16px;
+        }
+        .payday-runner.right {
+          right: 16px;
+        }
+
+        section {
+          border: solid 4px rgb(0,0,0);
+          padding: 24px;
+          border-radius: 8px;
+        }
+
+        h2 {
+          font-size: 32px;
+          font-weight: 800px;
+          font-family: "Comic Sans MS", "Comic Sans", cursive;
+        }
+
+        ul {
+          margin: 0px;
+          padding: 0px;
+          margin-left: 24px;
+        }
+
+        li,
+        p {
+          font-size: 24px;
+          font-family: "Comic Sans MS", "Comic Sans", cursive;
+          line-height: 1.6em
+        }
+
+        .flex-row {
+          display: flex;
+          flex-direction: row;
+          gap: 12px;
+        }
+
+        img {
+          border-radius: 8px;
+          width: 200px;
+          height: 200px;
+          background: rgb(230,230,230);
+        }
+
+        article {
+          position: relative;
+          z-index: 2;
+          padding-top: 24px;
+          padding-bottom: 24px;
+          padding-left: 148px;
+          padding-right: 148px;
+          border-left: solid 12px rgb(189,65,27);
+          border-right: solid 12px rgb(7, 62, 203);
+          flex-grow: 1;
+          display: flex;
+          flex-direction: column;
+          gap: 24px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Why you should exercise trice a week<h1>
-    <img src="/assets/exerciseday.jpeg" />
+  <main>
+    <div class="exerciseday-runner left"></div>
+    <div class="exerciseday-runner right"></div>
+    <article>
+      <h1>Stay Healthy - Exercise Day</h1>
+      <nav>
+        <ol>
+          <li><a href="#jogging">Jogging</a></li>
+          <li><a href="#exercising">Exercising</a></li>
+        </ol>
+      </nav>
+      <section>
+        <h2 id="jogging">Jogging</h2>
+          <ul>
+            <li>Moderate exercise, like jogging, actually strengthens your body's 
+                response to illness. That holds true for both short-term illnesses, 
+                like upper respiratory tract infections, and long-term illnesses, 
+                like diabetes.</li>
+            <li>The good news: A review Trusted Source of the research found that 
+                regularly running or jogging decreased insulin resistance in study participants. 
+                Researchers noted that a decrease in body fat and inflammation might be behind 
+                the improvement in insulin resistance.</li>
+          </ul>
+        <div class="flex-row">
+          <img src="/assets/jogging.jpeg"  />
+        </div>
+      </section>
+
+      <section>
+        <h2 id="exercising">Exercising</h2>
+          <ul>
+            <li>Regular, moderate physical exercise is good for the body, mind, 
+                and mood—and this is very true for patients with MS. 
+                When you have MS and you exercise, it can improve your fitness, 
+                endurance, and strength in your arms and legs.</li>
+            <li>Studies have shown that this can also give you better control 
+                over your bowel and bladder function, and decreased overall fatigue. 
+                And it can give your mood a boost.</li>
+          </ul>
+        <div class="flex-row">
+          <img src="/assets/exercising.jpeg"  />
+        </div>
+      </section>
+
+    </article>
+</main>
 </body>
 </html>
