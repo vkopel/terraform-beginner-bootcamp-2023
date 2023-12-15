@@ -5,13 +5,13 @@
       version = "1.0.0"
     }
   }
-  #cloud {
-    #organization = "vkopel"
+  cloud {
+    organization = "vkopel"
 
-    #workspaces {
-      #name = "terra-house-1"
-    #}
-  #}
+    workspaces {
+      name = "terra-house-1"
+    }
+  }
  }
 
  provider "terratowns" {
@@ -20,14 +20,11 @@
   token = var.terratowns_access_token
 }
 
-module "terrahouse_aws" {
-  source = "./modules/terrahouse_aws"
+module "home_cloudengineer_hosting" {
+  source = "./modules/terrahome_aws"
   user_uuid = var.teacherseat_user_uuid
-  bucket_name = var.bucket_name
-  index_html_filepath = var.index_html_filepath
-  error_html_filepath = var.error_html_filepath
-  assets_path = var.assets_path
-  content_version = var.content_version
+  public_path = var.cloudengineer.public_path
+  content_version = var.cloudengineer.content_version
 }
 
 resource "terratowns_home" "home" {
@@ -36,8 +33,27 @@ resource "terratowns_home" "home" {
 My best recommendation for your journey to be a Cloud Engineer is to 
 follow Andrew Brown's Tutorials. 
 DESCRIPTION
-  domain_name = module.terrahouse_aws.cloudfront_url
+  domain_name = module.home_cloudengineer_hosting.domain_name
   #domain_name = "3fhjq3gz.cloudfront.net"
   town = "missingo"
-  content_version = 1
+  content_version = var.cloudengineer.content_version
+}
+
+module "home_exerciseday_hosting" {
+  source = "./modules/terrahome_aws"
+  user_uuid = var.teacherseat_user_uuid
+  public_path = var.exerciseday.public_path
+  content_version = var.exerciseday.content_version
+}
+
+resource "terratowns_home" "home_exerciseday" {
+  name = "Exercising at least trice a week"
+  description = <<DESCRIPTION
+Exercising at least three times per week helps
+in boasting your immune system to always stay
+healthy
+DESCRIPTION
+  domain_name = module.home_exerciseday_hosting.domain_name
+  town = "missingo"
+  content_version = var.exerciseday.content_version
 }
